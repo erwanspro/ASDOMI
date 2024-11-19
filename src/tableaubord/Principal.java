@@ -23,6 +23,7 @@ public class Principal {
         Prestation presta2 = new Prestation("espion", LocalDate.of(2023, 10, 15), 1500.9);
         System.out.println(presta1);
         System.out.println(presta2);
+        
     }
     
 }
