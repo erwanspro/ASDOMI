@@ -6,13 +6,11 @@ public class Prestation {
     private String nomPrestation;
     private LocalDate datePrestation;
     private double montant;
-    private Intervenant intervenant;
 
-    public Prestation(String nomPrestation, LocalDate datePrestation, double montant, Intervenant intervenant) {
+    public Prestation(String nomPrestation, LocalDate datePrestation, double montant) {
         this.nomPrestation = nomPrestation;
         this.datePrestation = datePrestation;
         this.montant = montant;
-        this.intervenant = intervenant;
     }
 
     public String getNomPrestation() {
@@ -27,7 +25,11 @@ public class Prestation {
         return montant;
     }
 
-    public Intervenant getIntervenant() {
-        return intervenant;
+    @Override
+    public String toString() {
+        return "Prestation{" + "nom de la prestation :" + nomPrestation +
+        ", date de  debut de la prestation :" + datePrestation + ", montant :" + montant + '}';
     }
+    
+    
 }
