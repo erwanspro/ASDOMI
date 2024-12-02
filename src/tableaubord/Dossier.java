@@ -13,21 +13,18 @@ public class Dossier {
     private LocalDate dateNaissancePatient;
     private Collection<Prestation> mesPrestations;
 
-    // Constructeur
     public Dossier(String unNomPatient, String unPrenomPatient, LocalDate uneDateNaissancePatient) {
         this.nomPatient = unNomPatient;
         this.prenomPatient = unPrenomPatient;
         this.dateNaissancePatient = uneDateNaissancePatient;
-        this.mesPrestations = new ArrayList<>(); // Initialisation de la collection de prestations
+        this.mesPrestations = new ArrayList<>();
     }
 
-    // Méthode pour ajouter une prestation au dossier
     public void ajoutePrestation(String libelle, LocalDate uneDate, LocalTime uneHeure, Intervenant unIntervenant) {
         Prestation prestation = new Prestation(libelle, uneDate, uneHeure, unIntervenant);
         mesPrestations.add(prestation);
     }
 
-    // Fonction pour obtenir le nombre de prestations externes
     public int getNbPrestationsExternes() {
         int nbPrestationsExternes = 0;
         for (Prestation prestation : mesPrestations) {
@@ -38,12 +35,10 @@ public class Dossier {
         return nbPrestationsExternes;
     }
 
-    // Fonction pour obtenir le nombre total de prestations
     public int getNbPrestations() {
         return mesPrestations.size();
     }
 
-    // Fonction pour obtenir le nombre de jours de soins
     public int getNbJoursSoins() {
         Set<LocalDate> joursSoins = new HashSet<>();
         for (Prestation prestation : mesPrestations) {
