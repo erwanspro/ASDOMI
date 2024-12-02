@@ -12,13 +12,23 @@ public class IntervenantExterne extends Intervenant{
         this.tel = tel;
     }
 
-    public String getOrganisme() {
+    public String getSpecialite() {
         return specialite;
     }
 
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    
+
     @Override
     public String toString() {
-        return "IntervenantExterne{" + "specialite=" + specialite + 
+        return "IntervenantExterne{"+ super.toString()+ "specialite=" + specialite + 
         ", adresse=" + adresse + ", tel=" + tel + '}';
     }
 
