@@ -3,32 +3,32 @@ package tableaubord;
 import java.time.LocalDate;
 
 public class Prestation {
-    private String nomPrestation;
-    private LocalDate datePrestation;
-    private double montant;
+    private String libelle;
+    private LocalDate dateSoin;
+    private double heureSoin;
 
-    public Prestation(String nomPrestation, LocalDate datePrestation, double montant) {
-        this.nomPrestation = nomPrestation;
-        this.datePrestation = datePrestation;
-        this.montant = montant;
+    public Prestation(String nomPrestation, LocalDate datePrestation, double heureSoin) {
+        this.libelle = nomPrestation;
+        this.dateSoin = datePrestation;
+        this.heureSoin = heureSoin;
     }
 
     public String getNomPrestation() {
-        return nomPrestation;
+        return libelle;
     }
 
     public LocalDate getDatePrestation() {
-        return datePrestation;
+        return dateSoin;
     }
 
     public double getMontant() {
-        return montant;
+        return heureSoin;
     }
 
     @Override
     public String toString() {
-        return "Prestation{" + "nom de la prestation :" + nomPrestation +
-        ", date de  debut de la prestation :" + datePrestation + ", montant :" + montant + '}';
+        return "Prestation{" + "nom de la prestation :" + libelle +
+        ", date de  debut de la prestation :" + dateSoin + ", heure Soin :" + heureSoin + '}';
     }
     
     
