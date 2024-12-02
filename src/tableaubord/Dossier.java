@@ -1,13 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tableaubord;
 
-/**
- *
- * @author esellin
- */
+
 public class Dossier {
+    private String nature;
+    private String jour;
+    private String heure;
+    private String personneEnCharge;
+
+    public Dossier(String nature, String jour, String heure, String personneEnCharge) {
+        this.nature = nature;
+        this.jour = jour;
+        this.heure = heure;
+        this.personneEnCharge = personneEnCharge;
+    }
+    
+    
+    
+    
     
 }
