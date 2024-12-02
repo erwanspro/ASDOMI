@@ -1,28 +1,35 @@
 package tableaubord;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Prestation {
     private String libelle;
     private LocalDate dateSoin;
-    private double heureSoin;
+    private LocalTime heureSoin;
+    private Intervenant intervenant;
 
-    public Prestation(String nomPrestation, LocalDate datePrestation, double heureSoin) {
+    public Prestation(String nomPrestation, LocalDate datePrestation, LocalTime heureSoin,Intervenant unIntervenant) {
         this.libelle = nomPrestation;
         this.dateSoin = datePrestation;
         this.heureSoin = heureSoin;
+        this.intervenant = unIntervenant;
     }
 
-    public String getNomPrestation() {
+    public String getLibelle() {
         return libelle;
     }
 
-    public LocalDate getDatePrestation() {
+    public LocalDate getDate() {
         return dateSoin;
     }
 
-    public double getMontant() {
+    public LocalTime getHeure() {
         return heureSoin;
+    }
+
+    public Intervenant getIntervenant() {
+        return intervenant;
     }
 
     @Override

@@ -19,8 +19,8 @@ public class Principal {
 //        System.out.println(iExt1.isExterne());
 //        System.out.println(iExt2.isExterne());
         
-        Prestation presta1 = new Prestation("Consultation", LocalDate.of(2023, 10, 15), 150.0);
-        Prestation presta2 = new Prestation("espion", LocalDate.of(2023, 10, 15), 1500.9);
+//        Prestation presta1 = new Prestation("Consultation", LocalDate.of(2023, 10, 15), 150.0);
+//        Prestation presta2 = new Prestation("espion", LocalDate.of(2023, 10, 15), 1500.9);
 //        Intervenant iExt2 = new IntervenantExterne("Martin", "Sophie", "sophie.martin@example.com","laposte");
 //        System.out.println(presta1);
 //        System.out.println(presta2);
