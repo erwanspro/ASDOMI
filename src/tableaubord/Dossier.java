@@ -39,6 +39,8 @@ public class Dossier {
 
     public int getNbJoursSoins() {
         Collections.sort(mesPrestations);
+        
+        return 0;
     }
     
 }

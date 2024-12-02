@@ -40,7 +40,13 @@ public class Prestation implements Comparable<Prestation>{
 
     @Override
     public int compareTo(Prestation unePrestation) {
-        
+        if (this.dateSoin.equals(unePrestation.getDate())) {
+            return 0;
+        } else if (this.dateSoin.isAfter(unePrestation.getDate())) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 
     
