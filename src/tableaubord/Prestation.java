@@ -3,7 +3,7 @@ package tableaubord;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Prestation {
+public class Prestation implements Comparable<Prestation>{
     private String libelle;
     private LocalDate dateSoin;
     private LocalTime heureSoin;
@@ -36,6 +36,11 @@ public class Prestation {
     public String toString() {
         return "Prestation{" + "nom de la prestation :" + libelle +
         ", date de  debut de la prestation :" + dateSoin + ", heure Soin :" + heureSoin + '}';
+    }
+
+    @Override
+    public int compareTo(Prestation unePrestation) {
+        
     }
 
     

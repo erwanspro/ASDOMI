@@ -3,15 +3,13 @@ package tableaubord;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collections;
 
 public class Dossier {
     private String nomPatient;
     private String prenomPatient;
     private LocalDate dateNaissancePatient;
-    private Collection<Prestation> mesPrestations;
+    private ArrayList<Prestation> mesPrestations;
 
     public Dossier(String unNomPatient, String unPrenomPatient, LocalDate uneDateNaissancePatient) {
         this.nomPatient = unNomPatient;
@@ -40,11 +38,7 @@ public class Dossier {
     }
 
     public int getNbJoursSoins() {
-        Set<LocalDate> joursSoins = new HashSet<>();
-        for (Prestation prestation : mesPrestations) {
-            joursSoins.add(prestation.getDate());
-        }
-        return joursSoins.size();
+        Collections.sort(mesPrestations);
     }
     
 }
