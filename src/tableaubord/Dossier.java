@@ -31,7 +31,7 @@ public class Dossier {
     public int getNbPrestationsExternes() {
         int nbPrestationsExternes = 0;
         for (Prestation prestation : mesPrestations) {
-            if (prestation.isExterne()) {
+            if (prestation.getIntervenant().isExterne()) {
                 nbPrestationsExternes++;
             }
         }
