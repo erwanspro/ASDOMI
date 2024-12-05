@@ -2,7 +2,7 @@ package tableaubord;
 
 import java.util.ArrayList;
 
-public abstract class Intervenant {
+public class Intervenant {
     protected String nom;
     protected String prenom;
     private ArrayList<Prestation> lesPrestations;
@@ -31,5 +31,7 @@ public abstract class Intervenant {
             ", Nombre de Prestations: " + lesPrestations.size() + "]";
     }
     
-    public abstract boolean isExterne();
+    public boolean isExterne(){
+        return false;
+    };
 }

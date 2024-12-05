@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Dossier {
     private String nomPatient;
@@ -23,7 +25,7 @@ public class Dossier {
         mesPrestations.add(prestation);
     }
 
-    public int getNbPrestationsExternes() {
+    public int getNbIntervenantExternes() {
         int nbPrestationsExternes = 0;
         for (Prestation prestation : mesPrestations) {
             if (prestation.getIntervenant().isExterne()) {
@@ -38,9 +40,15 @@ public class Dossier {
     }
 
     public int getNbJoursSoins() {
+        if (mesPrestations.isEmpty()){
+            return 0;
+        }
         Collections.sort(mesPrestations);
-        
-        return 0;
+        Set<LocalDate> joursSoins = new HashSet<>();
+        for (Prestation prestation : mesPrestations) {
+            joursSoins.add(prestation.getDate());
+        }
+        return joursSoins.size();
     }
     
 }
